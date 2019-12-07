@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * @Author: your name
  * @Date: 2019-11-26 11:06:12
@@ -6,6 +7,8 @@
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\config\index.js
  */
+=======
+>>>>>>> yangli
 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
@@ -18,6 +21,7 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+<<<<<<< HEAD
     proxyTable: {
       '/api': {
        
@@ -31,6 +35,12 @@ module.exports = {
 
     // Various Dev Server settings
     host: '10.35.161.4', // can be overwritten by process.env.HOST
+=======
+    proxyTable: {},
+
+    // Various Dev Server settings
+    host: 'localhost', // can be overwritten by process.env.HOST
+>>>>>>> yangli
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# juanpi
-=======
 # prj
->>>>>>> e2d52e58be5bb0f4c36971943d1843ed665beb2b
 
 > A Vue.js project
 
