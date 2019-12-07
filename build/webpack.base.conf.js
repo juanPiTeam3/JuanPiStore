@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * @Author: your name
  * @Date: 2019-12-05 23:01:30
@@ -6,6 +7,8 @@
  * @Description: In User Settings Edit
  * @FilePath: \JuanPiStore\build\webpack.base.conf.js
  */
+=======
+>>>>>>> e2d52e58be5bb0f4c36971943d1843ed665beb2b
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -87,5 +90,8 @@ module.exports = {
     tls: 'empty',
     child_process: 'empty'
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> e2d52e58be5bb0f4c36971943d1843ed665beb2b
 }
