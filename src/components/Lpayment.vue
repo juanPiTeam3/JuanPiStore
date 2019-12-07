@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-02 10:13:45
- * @LastEditTime: 2019-12-05 16:54:58
+ * @LastEditTime: 2019-12-06 14:58:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\src\components\Lpurchase.vue
@@ -59,7 +59,7 @@ export default{
             ],
            Isactive:'active',
            haha:0,
-           currIndex:-1,
+           currIndex:0,
 		}
     },
     

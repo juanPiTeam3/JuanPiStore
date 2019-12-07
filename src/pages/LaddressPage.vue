@@ -4,7 +4,7 @@
  * @Author: 田江
  * @Date: 2019-11-06 14:35:10
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2019-12-05 17:49:24
+ * @LastEditTime: 2019-12-06 14:06:42
  -->
 <template>
     <div class="box">   
@@ -113,12 +113,26 @@ export default {
              }
             //  console.log(this.userInfor);
              if(this.userInfor!=null){
-                   this.$store.commit('userInfo',this.userInfor );  
-                 this.$router.push({path:'/LpurchasePage',
-                        query: {
-                                path:path
-                            }
-                });
+                   this.$store.commit('userInfo',this.userInfor ); 
+                    let  toPurchasePath=this.$route.query.path;
+                   if(toPurchasePath=='LdetailPage02'){
+                        this.$router.push({path:'/LpurchasePage',
+                                    query: {
+                                            path:toPurchasePath
+                                        }
+                                });
+                        }else{
+                            this.$router.push({path:'/LpurchasePage',
+                                      query: {
+                                            path:this.path
+                                        }  
+                                });
+                        } 
+                //  this.$router.push({path:'/LpurchasePage',
+                //         query: {
+                //                 path:path
+                //             }
+                // });
              }
                     
            

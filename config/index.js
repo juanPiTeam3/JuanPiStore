@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-11-26 11:06:12
- * @LastEditTime: 2019-11-29 23:12:56
+ * @LastEditTime: 2019-12-06 16:27:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\config\index.js
@@ -30,7 +30,7 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: '10.35.161.4', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

@@ -154,39 +154,46 @@ import axios from "axios";
          }
 	   },
 	   methods:{
-		   cars(){
-			//    let path=LdetailPage;
-			   this.$store.dispatch('getCarData');
-			   this.$router.push({path:'/LpurchasePage',
-                        query: {
-                                path:this.path
-                            }
-                });
-		   },
-		   
 		//    cars(){
-		// 	   var newData = [
-		// 			{
-		// 				"id":"001",
-		// 				"price":"109",
-		// 				"img":"static/img/a6.jpg",
-		// 				"num":"1",
-		// 				"title":"商场同款韩版厚羽绒服",
-		// 				"color":"黑色",
-		// 				"size":"165/88A/L"
-		// 			},
-		// 			{
-		// 				"id":"002",
-		// 				"price":"169",
-		// 				"img":"static/img/a5.jpg",
-		// 				"num":"3",
-		// 				"title":"时尚修身显瘦羽绒服",
-		// 				"color":"军绿色",
-		// 				"size":"160/80A/M"
-		// 			}
+			   //这是通过异步请求获取后端的购物车数据
+			//    let path=LdetailPage;
+		// 	   this.$store.dispatch('getCarData');
+		// 	   this.$router.push({path:'/LpurchasePage',
+        //                 query: {
+        //                         path:this.path
+        //                     }
+        //         });
+		//    },
+		   
+		   cars(){
+			   var goodsData = [
+					{
+						"id":"001",
+						"price":"109",
+						"img":"static/img/a6.jpg",
+						"num":"1",
+						"title":"商场同款韩版厚羽绒服",
+						"color":"黑色",
+						"size":"165/88A/L"
+					},
+					{
+						"id":"002",
+						"price":"169",
+						"img":"static/img/a5.jpg",
+						"num":"3",
+						"title":"时尚修身显瘦羽绒服",
+						"color":"军绿色",
+						"size":"160/80A/M"
+					}
 				
-		// 		 ]
-						
+				 ]
+				//  console.log(Array.isArray(goodsData))
+					this.$store.commit('carGoods',goodsData);
+					this.$router.push({path:'/LpurchasePage',
+							query: {
+									path:this.path
+								}
+					});
 		// 		axios(
 		// 			{
 		// 				method: 'POST',
@@ -200,7 +207,7 @@ import axios from "axios";
 		// 			console.log(err);
 		// 		})
 		//  },
-                
+		   },    
 		   show(){
                this.popupVisible=true;
 		   },

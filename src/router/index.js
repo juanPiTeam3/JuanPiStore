@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-11-26 11:06:12
- * @LastEditTime: 2019-12-04 15:31:39
+ * @LastEditTime: 2019-12-06 16:23:02
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\src\router\index.js
@@ -13,6 +13,8 @@ import loginPage from '@/pages/loginPage'
 import LpicturePage from '@/pages/LpicturePage'
 import LpurchasePage from '@/pages/LpurchasePage'
 import LaddressPage from '@/pages/LaddressPage'
+import LcarGoodsPage from '@/pages/LcarGoodsPage'
+import LpayMoneyPage from '@/pages/LpayMoneyPage'
 import Router from 'vue-router'
 const routerPush = Router.prototype.push
 Router.prototype.push = function push(location) {
@@ -23,8 +25,8 @@ let router= new Router({
   routes: [
     {
       path: '/',
-      name: 'LdetailPage',
-      component: LdetailPage
+      name: 'LpayMoneyPage',
+      component: LpayMoneyPage
     },
     {
       path: '/LdetailPage',
@@ -56,7 +58,19 @@ let router= new Router({
       path: '/LaddressPage',
       name: 'LaddressPage',
       component: LaddressPage
-    }
+    },
+    {
+      path: '/LcarGoodsPage',
+      name: 'LcarGoodsPage',
+      component: LcarGoodsPage
+    },
+    {
+      path: '/LpayMoneyPage',
+      name: 'LpayMoneyPage',
+      component: LpayMoneyPage
+    },
+    
+
   ]
 })
 router.beforeEach((to,from,next)=>{

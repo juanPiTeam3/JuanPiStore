@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-02 10:13:45
- * @LastEditTime: 2019-12-05 18:08:50
+ * @LastEditTime: 2019-12-06 10:51:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\src\components\Lpurchase.vue
@@ -47,7 +47,7 @@ export default{
     },
      created(){
       let path= this.$route.query.path;
-      if(path=='LaddressPage'){
+      if(path=='LaddressPage' ||path=='LdetailPage02' ){
           this.show="none";
           this.Isshow="block";
           this.Show="block";

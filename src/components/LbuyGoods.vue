@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-02 10:13:45
- * @LastEditTime: 2019-12-05 17:52:00
+ * @LastEditTime: 2019-12-06 14:37:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\src\components\Lpurchase.vue
@@ -35,16 +35,16 @@
    </div>
     <div class="carImg" v-bind:class="{active: Active}">
        <div class="goodsImg">
-          <img :src="img" alt="" v-for="(img,index) in carsGoodsImg1" :key="index">
+          <img :src="img" alt="" v-for="(img,index) in $store.state.carsImg" :key="index">
          
        </div>
-      <h4>共{{goodsSum}}件</h4>  
+      <h4 @click="godetail">共{{$store.state.carGoodsNum}}件 <i class="iconfont icon-qianjin"></i> </h4>  
     </div>
    <div class="middle">
        <div class="cls">
           <h5>商品总额</h5>
           <label v-bind:class="{show: isShow}">{{'￥'+price+'.00'}}</label>
-          <label v-bind:class="{show: Show}">{{'￥'+totalMoney+'.00'}}</label>
+          <label v-bind:class="{show: Show}">{{'￥'+$store.state.totalMoney+'.00'}}</label>
        </div>
        <div class="cls">
            <h3>使用优惠券</h3>
@@ -84,7 +84,8 @@ export default{
             totalMoney:0,
             goodsSum:0,
             goodsImgAndName:{},
-             value:true
+             value:true,
+             buyProducts:{}
 
 		}
     },
@@ -99,24 +100,43 @@ export default{
              this.active='block';
             }
            
+        },
+        godetail(){
+            this.$router.push({path:'LcarGoodsPage'});
         }
-    },
+    }, 
     mounted(){
       this.goodsInfo=this.$store.state.buyObj;
       this.goodsImgAndName=this.$store.state.goodsImgAndName;
-        // console.log(this.goodsImgAndName);
+       let path= this.$route.query.path;
+             if(path=='LdetailPage02' || path=='LdetailPage'){
+                 this.isActive=true;
+                 this.Active=false;
+                  this.isShow=true;
+                 this.Show=false;
+                 
+                //   console.log(val)
+             }else{
+                 this.isActive=false;
+                 this.Active=true;
+                  this.isShow=false;
+                 this.Show=true;
+                //   this.goodsInfo=this.$store.state.buyObj;
+
+             }
+     
     },
    computed:{
       
-        loginState:function(){
-            let obj={
-                imgs: this.$store.state.carsImg,
-                prices:this.$store.state.totalMoney,
-                goodsSum:this.$store.state.carGoodsNum
-            }
-            return obj;
-            // console.log(this.$store.state.carsImg);
-        },
+        // loginState:function(){
+        //     let obj={
+        //         imgs: this.$store.state.carsImg,
+        //         prices:this.$store.state.totalMoney,
+        //         goodsSum:this.$store.state.carGoodsNum
+        //     }
+        //     return obj;
+        //     console.log(obj);
+        // },
     //    carPrice:function(){
     //        return this.$store.state.totalMoney;
     //     //    console.log(this.$store.state.totalMoney);
@@ -135,29 +155,29 @@ export default{
         //  },
         loginState(val) {
             
-             let path= this.$route.query.path;
-             if(path=='LdetailPage'){
-                 this.isActive=true;
-                 this.Active=false;
-                  this.isShow=true;
-                 this.Show=false;
-                 this.carsGoodsImg1=val.imgs;
-                 this.totalMoney=val.prices;
-                 this.goodsSum=val.goodsSum;
-                //   console.log(val)
-             }else{
-                 this.isActive=false;
-                 this.Active=true;
-                  this.isShow=false;
-                 this.Show=true;
-                //   this.goodsInfo=this.$store.state.buyObj;
+            //  let path= this.$route.query.path;
+            //  if(path=='LdetailPage'){
+            //      this.isActive=true;
+            //      this.Active=false;
+            //       this.isShow=true;
+            //      this.Show=false;
+            //      this.carsGoodsImg1=val.imgs;
+            //      this.totalMoney=val.prices;
+            //      this.goodsSum=val.goodsSum;
+            //     //   console.log(val)
+            //  }else{
+            //      this.isActive=false;
+            //      this.Active=true;
+            //       this.isShow=false;
+            //      this.Show=true;
+            //     //   this.goodsInfo=this.$store.state.buyObj;
 
-             }
-           
+            //  }
            
         }
-    },
+        }
 }
+
  </script>
 
 <style scoped>
@@ -193,7 +213,7 @@ export default{
 }
 .carImg h4{
     width:18px;
-    height:100%;
+    height:.8rem;
    text-align: center;
     align-items: center;
     flex-wrap: wrap;

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-02 10:13:45
- * @LastEditTime: 2019-12-05 17:17:29
+ * @LastEditTime: 2019-12-06 11:07:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\src\components\Lpurchase.vue
@@ -14,7 +14,7 @@
         <i class="iconfont icon-tishi1"></i>
         <span>应付金额：</span>
          <p v-bind:class="{active1: isShow}">{{'￥'+price+'.00'}}</p>
-         <p v-bind:class="{active1: Show}">{{'￥'+totalMoney+'.00'}}</p>
+         <p v-bind:class="{active1: Show}">{{'￥'+$store.state.totalMoney+'.00'}}</p>
    </div>
    <div class="right" @click="gobuy">
        去付款
@@ -45,8 +45,9 @@ export default{
           goodsInfo:{},
            totalMoney:0,
             isShow:false,
-            Show:true
-         
+            Show:true,
+            path:'LdetailPage02'
+          
 		}
     },
    
@@ -56,6 +57,7 @@ export default{
             // console.log(address)
             if(address=='请填写收货地址'){
                  this.dialogVisible=true;
+              
             }else if(address==''){
                this.dialogVisible=false;
                this.$router.push({path:'/LdetailPage'});
@@ -65,7 +67,20 @@ export default{
             this.dialogVisible=false; 
         },
         goWrite(){
-             this.$router.push({path:'/LaddressPage'});
+             let  toAddressPath=this.$route.query.path;
+            console.log(toAddressPath);
+            if(toAddressPath=='LdetailPage'){
+             this.$router.push({path:'/LaddressPage',
+							query: {
+									path:this.path
+								}
+					});
+            }else{
+                   this.$router.push({path:'/LaddressPage',
+							
+					});
+            }
+             
         }
         
     },
@@ -74,34 +89,46 @@ export default{
         this.goodsInfo=this.$store.state.buyObj;
        //在页面加载时读取sessionStorage里的状态信息
        
-},
+      },
+      mounted(){
+            let path= this.$route.query.path;
+             if(path=='LdetailPage' || path=='LdetailPage02'){
+                 this.isShow=true;
+                 this.Show=false;
+                 
+                
+             }else{
+                  this.isShow=false;
+                 this.Show=true;
+               }
+      },
     computed:{
-         carPrice:function(){
-           return this.$store.state.totalMoney;
-        //    console.log(this.$store.state.totalMoney);
+    //      carPrice:function(){
+    //        return this.$store.state.totalMoney;
+    //     //    console.log(this.$store.state.totalMoney);
 
-       },
+    //    },
         price(){
             // console.log(this.goodsInfo.price*this.goodsInfo.buyNum);
           return this.goodsInfo.price*this.goodsInfo.buyNum;
           
         }
     },
-       watch:{
-         carPrice(price){
-            //  console.log(price);
-             let path= this.$route.query.path;
-             if(path=='LdetailPage'){
-                 this.isShow=true;
-                 this.Show=false;
-                 this.totalMoney=price;
+    //    watch:{
+    //      carPrice(price){
+    //         //  console.log(price);
+    //          let path= this.$route.query.path;
+    //          if(path=='LdetailPage'){
+    //              this.isShow=true;
+    //              this.Show=false;
+    //              this.totalMoney=price;
                 
-             }else{
-                  this.isShow=false;
-                 this.Show=true;
-               }
-          }
-    }
+    //          }else{
+    //               this.isShow=false;
+    //              this.Show=true;
+    //            }
+    //       }
+    // }
 
 }
 </script>
