@@ -3,7 +3,7 @@
  * @Author: 是丽丽呀
  * @Date: 2019-11-26 09:41:44
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-11-30 20:16:44
+ * @LastEditTime: 2019-12-08 15:28:03
  -->
 <template>
   <div class="box">
@@ -55,8 +55,7 @@ export default {
    
     #show{
         width: 100%;
-        height: .6rem;
-        background-color:#fff;
+        height: 250px;
          display: flex;
         justify-content: space-between;
         align-items: center;

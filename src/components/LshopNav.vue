@@ -3,7 +3,7 @@
  * @Author: 是丽丽呀
  * @Date: 2019-11-26 09:41:44
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-12-02 16:00:16
+ * @LastEditTime: 2019-12-08 15:09:16
  -->
 <template>
   <div class="box">
@@ -79,7 +79,7 @@ export default {
     ul{
         width: 100%;
         margin: 0 auto;
-        height: .1rem;
+        height: .4rem;
         background-color: #fff;
         font-size: 16px;
         display: flex;

@@ -3,7 +3,7 @@
  * @Author: 是丽丽呀
  * @Date: 2019-11-26 09:41:44
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-12-05 18:12:12
+ * @LastEditTime: 2019-12-08 15:03:56
  -->
 <template>
   <div class="hello">
@@ -104,7 +104,7 @@ export default {
 <style scoped>
   #istop{
     width: 100%;
-    height: .14rem;
+    height: 40px;
     background-color: rgb(243, 242, 242);
     display: flex;
     align-items: center;
@@ -116,18 +116,16 @@ export default {
     font-size: .06rem;
   }
   input{
-    width: .65rem;
-    height: .06rem;
     outline: none;
     border: none;
     margin-left: 40px;
   }
   #Search{
     border-radius: .05rem;
-    /* width: .6rem; */
+    width: 2.4rem;
     padding: 2px;
     background-color: #fff;
-    height: .06rem;
+    /* height: .06rem; */
     position: relative;
    }
   #Search i{
@@ -143,9 +141,10 @@ export default {
   }
   #bottom{
       margin-left: 15px;
+      margin-top: 20px;
   }
   #bottom h5{
-      font-size: 22px;
+      font-size: 20px;
       color: rgb(175, 170, 170);
   }
   #center ul{

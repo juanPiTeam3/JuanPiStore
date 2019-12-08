@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-26 16:38:36
- * @LastEditTime: 2019-12-05 16:11:23
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-12-08 16:03:57
+ * @LastEditors: 是丽丽呀
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\src\components\Ldetailinfo.vue
  -->
@@ -92,6 +92,7 @@ export default{
 .box{
 width:100%;
 margin-top:10px;
+margin-bottom: 70px;
 }
 
 em{

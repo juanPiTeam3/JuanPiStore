@@ -4,7 +4,7 @@
  * @Author: 田江
  * @Date: 2019-11-05 09:35:52
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-12-03 10:13:05
+ * @LastEditTime: 2019-12-08 15:17:43
  -->
 <template>
   <div>
@@ -29,7 +29,7 @@ export default {
         return {
             objs:[
                 {
-                    src:"static/img/banner01.jpg",
+                    src:"static/img/Banner03 (1).jpg",
                     href:"https://www.baidu.com"
                 },
                 {
@@ -37,7 +37,7 @@ export default {
                     href:"http://1000phone.com"
                 },
                 {
-                    src:"static/img/banner03.jpg",
+                    src:"static/img/Banner03 (2).jpg",
                     href:"http://vip.com"
                 }
             ]
@@ -47,7 +47,7 @@ export default {
         //此时已经有dom了。
         var mySwiper = new Swiper ('.swiper-container',{
             autoplay:true,
-            speed:200,
+            speed:100,
             grabCursor:true,
                 // 如果需要分页器
             pagination: {
@@ -64,13 +64,14 @@ export default {
 .swiper-container {
     width: 100%;
     height: 200px;
-}  
+    margin-top: 80px;
+} 
 img{
     width: 100%;
     height: 100%;
     display: block;
 }
 .swiper-pagination{
-    margin-bottom: -80px;
+    /* margin-bottom: -80px; */
 }
 </style>

@@ -37,15 +37,19 @@ export default {
         margin-top: 20px;
     }
     #center{
+        height: 50px;
         text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
     i{
         color: #ff4627;
         font-size: 24px;
-        margin-left: -340px;
-        margin-top: 20px;
-        display: block;
-        line-height: .25rem;
+        /* margin-left: -340px; */
+        margin-top: -73px;
+        /* display: block; */
+        /* line-height: .25rem; */
 
     }
     span{

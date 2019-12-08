@@ -4,7 +4,7 @@
  * @Author: 
  * @Date: 2019-11-06 14:35:10
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-11-28 19:41:06
+ * @LastEditTime: 2019-12-08 15:08:14
  -->
 <template>
     <div id="box">
@@ -48,13 +48,11 @@ export default {
 <style scoped>
 #box{
     width: 100%;
-    height: .5rem;
     font-size: 16px;
     margin-bottom: 10px;
 }
 #top{
     width: 100%;
-    height: .2rem;
     background-color: #fff;
 }
 #top img{
@@ -89,13 +87,13 @@ export default {
 }
 #bottom{
     width: 100%;
-    height: .3rem;
     background:url('../../static/img/brand_bg.15e6f457.png')
 
 }
 #bottom div{
     width: 50px;
     height: 20px;
+    margin-top: 20px;
     background-color: #ff464e;
     color: #fff;
     font-size: 14px;

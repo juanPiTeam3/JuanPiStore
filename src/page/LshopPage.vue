@@ -3,7 +3,7 @@
  * @Author: 是丽丽呀
  * @Date: 2019-11-09 09:17:12
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-12-02 14:12:17
+ * @LastEditTime: 2019-12-08 15:57:18
  -->
 <template>
     <div id="box">
@@ -13,6 +13,7 @@
             <LshopNav></LshopNav>
             <Lshopgoodlist :Isshopname="this.$route.params.isshopname"></Lshopgoodlist>
         </div>
+        <LyFooter id="myfooterr"></LyFooter>
     </div>
    
 </template>
@@ -21,6 +22,8 @@ import Lback from '../components/Lback';
 import Lshopname from '../components/Lshopname';
 import LshopNav from '../components/LshopNav';
 import Lshopgoodlist from '../components/Lshopgoodlist';
+import LyFooter from '../components/LyFooter';
+
 
 // console.log(this.$route.parmas.id)
 export default {
@@ -31,7 +34,7 @@ export default {
         }
     },
     components:{
-      Lback,Lshopname,LshopNav,Lshopgoodlist
+      Lback,Lshopname,LshopNav,Lshopgoodlist,LyFooter
     },
     mounted(){
         // console.log(this.$route.params.isshopname)
@@ -46,6 +49,12 @@ export default {
         left: 0;
     }
     #center{
-        margin-top: 20px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    #myfooterr{
+        position: fixed;
+        bottom: 0;
+        left: 0;
     }
 </style>

@@ -3,7 +3,7 @@
  * @Author: 是丽丽呀
  * @Date: 2019-11-26 16:19:30
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-12-05 19:53:39
+ * @LastEditTime: 2019-12-08 15:48:50
  -->
 
 <template>
@@ -152,7 +152,6 @@ p{
 }
     ul{
         width: 100%;
-        margin-bottom: 68px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -196,7 +195,7 @@ p{
     }
     #wenzi div{
         /* border: 1px solid #ff464e; */
-        /* width:100px; */
+        width:94px;
         height: 20px;
         color: black;
         float: right;

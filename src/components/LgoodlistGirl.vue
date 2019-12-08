@@ -3,7 +3,7 @@
  * @Author: 是丽丽呀
  * @Date: 2019-11-26 16:19:30
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-12-05 20:22:45
+ * @LastEditTime: 2019-12-08 15:36:25
  -->
   <!--
  * @Description: 头部导航栏
@@ -82,7 +82,6 @@ export default {
         font-size: 26px;
     }
     ul{
-        margin-bottom: 68px;
         width: 100%;
         display: flex;
         justify-content: space-between;

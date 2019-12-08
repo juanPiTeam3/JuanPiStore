@@ -3,7 +3,7 @@
  * @Author: 是丽丽呀
  * @Date: 2019-11-26 09:41:44
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-12-05 21:16:35
+ * @LastEditTime: 2019-12-08 15:19:50
  -->
 <template>
   <div class="box">
@@ -71,7 +71,7 @@ export default {
 <style scoped>
     ul{
         width: 100%;
-        height: .1rem;
+        /* height: .4rem; */
         background-color: #fff;
         display: flex;
         justify-content: space-between;
@@ -80,8 +80,8 @@ export default {
     }
     li{
         font-size: 18px;
-        height: .1rem;
-        line-height: .1rem;
+        height: .4rem;
+        line-height: .4rem;
         flex-shrink: 0;
         margin-left: 20px;
     }
@@ -91,7 +91,7 @@ export default {
     }
     .last{
         width: 10%;
-        height: .1rem;
+        height: .4rem;
         background-color: #fff;
         font-size: 20px;
         font-weight: 800;
@@ -104,7 +104,7 @@ export default {
     }
     #show{
         width: 100%;
-        height: .6rem;
+        height: 280px;
         background-color:#fff;
          display: flex;
         justify-content: space-between;
@@ -113,7 +113,7 @@ export default {
     }
     #show div{
          width: 23%;
-         /* overflow: hidden; */
+         overflow: hidden;
     }
     #show span{
         display: block;

@@ -3,12 +3,12 @@
  * @Author: 是丽丽呀
  * @Date: 2019-11-09 09:17:12
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-11-30 14:35:08
+ * @LastEditTime: 2019-12-08 16:03:18
  -->
 <template>
     <div id="box">
         <div id="center">
-            <Liheader></Liheader> 
+            <Liheader></Liheader>  
             <Lnav></Lnav>
         </div>
         <div id="middle">
@@ -18,8 +18,9 @@
             <Ltitle></Ltitle>
             <Lgoodlist></Lgoodlist> 
         </div>
+        <LyFooter id="myfoooterr"></LyFooter>
+
     </div>
-        <!-- <Lfooter></Lfooter> -->
     
 </template>
 <script>
@@ -30,7 +31,7 @@ import Llist from '../components/Llist';
 import Lactive from '../components/Lactive';
 import Ltitle from '../components/Ltitle';
 import Lgoodlist from '../components/Lgoodlist';
-// import Lfooter from '../components/Lfooter';
+import LyFooter from '../components/LyFooter';
 
 
 
@@ -43,7 +44,7 @@ export default {
     },
     components:{
         Liheader,Lnav,Lbanner,Llist,Lactive,Ltitle,Lgoodlist
-        // ,Lfooter
+        ,LyFooter
     }
 
 }
@@ -55,10 +56,17 @@ export default {
         top: 0;
         left: 0;
         right: 0;
-         z-index: 2; 
+        z-index: 2; 
 
     }
     #middle{
-        margin-top: .25rem;
+        margin-bottom: 50px;
+        
+    }
+    #myfoooterr{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
     }
 </style>

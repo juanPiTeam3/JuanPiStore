@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-26 11:16:26
- * @LastEditTime: 2019-12-05 15:44:16
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-12-08 16:01:15
+ * @LastEditors: 是丽丽呀
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\src\components\Ldetails.vue
  -->
@@ -181,10 +181,10 @@ strong{
     text-align: center;
 }
 .tu .icon-fenxiang{
-font-size:.49rem;
+font-size:30px;
 color:#fe474c;
-text-align: center;
-line-height: .44rem;
+display: block;
+margin-top: -20px;
 }
 label{
     text-align: center;

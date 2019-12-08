@@ -3,15 +3,19 @@
  * @Author: 是丽丽呀
  * @Date: 2019-11-09 09:17:12
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-12-05 17:32:47
+ * @LastEditTime: 2019-12-08 15:34:43
  -->
 <template>
     <div id="box">
         <LbackHeader></LbackHeader>
-        <LmainGirl></LmainGirl>
-        <Ltitle></Ltitle>
-        <LgoodlistGirl v-show="isshowA"></LgoodlistGirl>
-        <Lshopgoodlist  v-show="isshowB"></Lshopgoodlist>
+        <div id="center">
+            <LmainGirl></LmainGirl>
+            <Ltitle></Ltitle>
+            <LgoodlistGirl v-show="isshowA"></LgoodlistGirl>
+            <Lshopgoodlist  v-show="isshowB"></Lshopgoodlist>
+        </div>
+       
+        <LyFooter id="myfooterr"></LyFooter>
     </div>
 </template>
 <script>
@@ -20,8 +24,7 @@ import LmainGirl from '../components/LmainGirl';
 import Ltitle from '../components/Ltitle';
 import LgoodlistGirl from '../components/LgoodlistGirl';
 import Lshopgoodlist from '../components/Lshopgoodlist';
-
-
+import LyFooter from '../components/LyFooter';
 
 export default {
     name:'LmainPage',
@@ -33,11 +36,9 @@ export default {
         }
     },
     components:{
-       LmainGirl,Ltitle,LgoodlistGirl,LbackHeader,Lshopgoodlist
+       LmainGirl,Ltitle,LgoodlistGirl,LbackHeader,Lshopgoodlist,LyFooter
     },
-    created:{
-       
-    },
+   
     mounted(){
          if(this.type=='女装'){
              this.isshowA=true;
@@ -50,5 +51,21 @@ export default {
 }
 </script>
 <style scoped>
- 
+/* #myfooterr{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+} */
+html,body{
+    height: 100%;
+
+} 
+body{
+    display: flex;
+    flex-direction: column;
+}
+#center{
+    flex: 1;
+    overflow-y: auto;
+}
 </style>

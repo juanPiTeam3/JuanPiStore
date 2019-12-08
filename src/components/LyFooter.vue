@@ -4,7 +4,7 @@
  * @Author: 是丽丽呀
  * @Date: 2019-11-26 16:19:30
  * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-12-05 20:44:02
+ * @LastEditTime: 2019-12-08 15:31:18
  -->
 
 <template>
@@ -57,11 +57,10 @@ export default {
 <style scoped>
    #box{
        width: 100%;
-       height: .18rem;
+       height: 40px;
    }
     ul{
-        margin-top: 50px;
-        background-color: #fff;
+        background-color: rgb(247, 247, 247);
         display: flex;
         align-items: center;
         justify-content: space-around;
