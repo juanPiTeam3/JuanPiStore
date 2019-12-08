@@ -29,9 +29,9 @@ let router= new Router({
   routes: [
     {
       path: '/',
-      name: 'LpayMoneyPage',
-      component: LpayMoneyPage
-    },
+      name: 'Liindex',
+      component: Liindex
+   },
     {
       path: '/LdetailPage',
       name: 'LdetailPage',
@@ -73,11 +73,7 @@ let router= new Router({
       name: 'LpayMoneyPage',
       component: LpayMoneyPage
     },
-    {
-      path: '/',
-      name: 'Liindex',
-      component: Liindex
-   },
+   
    {
       path: '/LshopPage/:isshopname',
       name: 'LshopPage',

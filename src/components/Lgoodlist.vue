@@ -5,13 +5,7 @@
  * @LastEditors: 是丽丽呀
  * @LastEditTime: 2019-12-05 15:46:41
  -->
-  <!--
- * @Description: 头部导航栏
- * @Author: 是丽丽呀
- * @Date: 2019-11-26 09:41:44
- * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-11-26 16:15:50
- -->
+
 <template>
     <div class="box">
        <ul>         
@@ -45,9 +39,10 @@ export default {
     }
   },
   created(){
-      axios('http://localhost:3000/goodlilst')
+      axios.get('/goodlilst')
       .then((res)=>{
           this.goods=res.data;
+          console.log(res);
       })
       .catch((err)=>{
           console.log('服务器端出错了'+err)
@@ -79,7 +74,7 @@ destroyed (){
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
     ul{
         width: 100%;

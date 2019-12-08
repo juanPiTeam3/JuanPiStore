@@ -60,7 +60,7 @@ export default{
    name: 'page-tab-container',
   data() {
     return {
-    
+      id:'',
       goodsImg:{},
       goodsCanshu:[],
       goodsConsult:[],
@@ -71,7 +71,8 @@ export default{
   },
   
     created(){
-				axios.get('goodsDetails/001')
+       this.id=this.$store.state.goodsId;
+				axios.get('goodsDetails/'+this.id)
 				.then(res=>{
         
         this.goodsImg=res.data.goodsImg;

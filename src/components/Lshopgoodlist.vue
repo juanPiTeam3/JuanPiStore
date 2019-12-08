@@ -5,18 +5,12 @@
  * @LastEditors: 是丽丽呀
  * @LastEditTime: 2019-12-05 19:53:39
  -->
-  <!--
- * @Description: 头部导航栏
- * @Author: 是丽丽呀
- * @Date: 2019-11-26 09:41:44
- * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-11-26 16:15:50
- -->
+
 <template>
 
     <div class="box">
         <ul>
-            <li v-for="(item,index) in goods" :key="index">
+            <li v-for="(item,index) in goods" :key="index" @click="goLdetail(item.id)">
                 <img :src="item.img" alt="">
                 <div id="wenzi">
                     <h5>{{item.decoration}}</h5>
@@ -49,7 +43,7 @@ export default {
     }
   },
   created(){
-            axios('http://localhost:3000/shopname/')
+            axios('/shopname')
             .then((res)=>{
                 let datas=res.data; 
                 let arr=[];
@@ -66,7 +60,7 @@ export default {
 
       if(this.type=='居家'){
             this.goods=[];
-            axios('http://localhost:3000/goodlilstJujia/')
+            axios.get('/goodlilstJujia')
             .then((res)=>{
                 this.goods=res.data; 
             })
@@ -97,6 +91,11 @@ export default {
           });
           let arr=data;
           return arr;
+      },
+      goLdetail(id){
+          console.log(id);
+          this.$store.commit('goodsId',id);
+       this.$router.push({path:'/LdetailPage'});
       }
 
         

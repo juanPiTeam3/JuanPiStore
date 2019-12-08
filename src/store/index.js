@@ -20,7 +20,7 @@ export default new VueX.Store({
         totalMoney:0,
         carGoodsNum:0,
         goodsImgAndName:{},
-        goodsId:"002",
+        goodsId:"",
         goodsData:[],
         footers:[
             {
@@ -52,6 +52,10 @@ export default new VueX.Store({
        num:0 
       },
       mutations:{
+        goodsId(state,id){
+        //用来获取商品的id
+           state.goodsId=id;
+        },
            // 点击事件获取点击的事件名,在详情页里点击销量的那个导航条
         changetype(state,typename){
             state.sale=typename;
@@ -64,7 +68,8 @@ export default new VueX.Store({
         cteateNum(state,num){
             state.num=num;
             // console.log(state.num)
-        },     
+        }, 
+            
          carGoods(state,goodsData){
            state.goodsData=goodsData;
            let littleMoney=0

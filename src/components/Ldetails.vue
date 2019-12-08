@@ -64,6 +64,7 @@ export default{
     },
 	created(){
         this.id=this.$store.state.goodsId;
+        //  this.id= this.$route.query.id;
         // console.log(this.id);
 		axios.get('bannerimgs/'+this.id)
 		.then(res=>{

@@ -26,7 +26,7 @@ export default {
     }
   },
   created(){
-      axios('http://localhost:3000/lis')
+      axios.get('/lis')
       .then(res=>{
           this.lis=res.data
       })

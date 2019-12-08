@@ -87,7 +87,9 @@ import Lstore from '../components/Lstore';
 				}
 	}
 </script>
-<style scoped>
+<style  scoped>
+
+
 .box{
 	width:100%;
 background: #f3f4f8;
