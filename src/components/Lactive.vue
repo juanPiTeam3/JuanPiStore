@@ -5,13 +5,7 @@
  * @LastEditors: 是丽丽呀
  * @LastEditTime: 2019-12-03 10:50:07
  -->
-  <!--
- * @Description: 有倒计时的那部分
- * @Author: 是丽丽呀
- * @Date: 2019-11-26 09:41:44
- * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-11-26 16:15:50
- -->
+ 
 <template>
 <div>
     <div class="box">

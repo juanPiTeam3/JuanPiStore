@@ -1,5 +1,4 @@
 /*
-<<<<<<< HEAD
  * @Author: your name
  * @Date: 2019-11-26 11:06:12
  * @LastEditTime: 2019-12-06 16:23:02
@@ -15,7 +14,11 @@ import LpicturePage from '@/pages/LpicturePage'
 import LpurchasePage from '@/pages/LpurchasePage'
 import LaddressPage from '@/pages/LaddressPage'
 import LcarGoodsPage from '@/pages/LcarGoodsPage'
-import LpayMoneyPage from '@/pages/LpayMoneyPage'
+import LpayMoneyPage from '@/pages/LpayMoneyPage';
+import Liindex from '@/page/Liindex'
+import LshopPage from '@/page/LshopPage';
+import LmainPage from '@/page/LmainPage';
+import LsearchPage from '@/page/LsearchPage';
 import Router from 'vue-router'
 const routerPush = Router.prototype.push
 Router.prototype.push = function push(location) {
@@ -70,7 +73,33 @@ let router= new Router({
       name: 'LpayMoneyPage',
       component: LpayMoneyPage
     },
-    
+    {
+      path: '/',
+      name: 'Liindex',
+      component: Liindex
+   },
+   {
+      path: '/LshopPage/:isshopname',
+      name: 'LshopPage',
+      component: LshopPage
+  },
+  {
+    path: '/LmainPage',
+    name: 'LmainPage',
+    component: LmainPage
+  },
+  {
+    path: '/LsearchPage',
+    name: 'LsearchPage',
+    component: LsearchPage,
+    // 路由守卫，让其不能搜索商品
+    // beforeEnter(to,from,next){
+    //   if(!localStorage.getItem('name')){
+    //     next('/Dlogin')
+    //   }
+    //   next()
+    // }
+  }
 
   ]
 })
@@ -91,62 +120,7 @@ router.beforeEach((to,from,next)=>{
 });
 
 export default router;
-=======
- * @Description: 
- * @Author: 是丽丽呀
- * @Date: 2019-11-26 09:25:56
- * @LastEditors: 是丽丽呀
- * @LastEditTime: 2019-12-04 21:23:39
- */
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Liindex from '@/page/Liindex'
-import LshopPage from '@/page/LshopPage';
-import LmainPage from '@/page/LmainPage';
-import LsearchPage from '@/page/LsearchPage';
-
-
-Vue.use(Router)
-
-export default new Router({
-  routes: [
-    // {
-    //   path: '/',
-    //   name: 'HelloWorld',
-    //   component: HelloWorld
-    // },
-     {
-        path: '/',
-        name: 'Liindex',
-        component: Liindex
-     },
-     {
-        path: '/LshopPage/:isshopname',
-        name: 'LshopPage',
-        component: LshopPage
-    },
-    {
-      path: '/LmainPage',
-      name: 'LmainPage',
-      component: LmainPage
-    },
-    {
-      path: '/LsearchPage',
-      name: 'LsearchPage',
-      component: LsearchPage,
-      // 路由守卫，让其不能搜索商品
-      // beforeEnter(to,from,next){
-      //   if(!localStorage.getItem('name')){
-      //     next('/Dlogin')
-      //   }
-      //   next()
-      // }
-
-    }
 
 
 
-  ]
-})
->>>>>>> yangli
+
