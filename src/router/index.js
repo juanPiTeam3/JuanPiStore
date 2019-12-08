@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2019-11-26 11:06:12
- * @LastEditTime: 2019-12-06 16:23:02
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-12-08 16:01:52
+ * @LastEditors: 王磊
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\src\router\index.js
  */
@@ -19,6 +19,9 @@ import Liindex from '@/page/Liindex'
 import LshopPage from '@/page/LshopPage';
 import LmainPage from '@/page/LmainPage';
 import LsearchPage from '@/page/LsearchPage';
+
+import WseachPage from '@/pages/WseachPage'
+import WshoppingCar from '@/pages/WshoppingCar'
 import Router from 'vue-router'
 const routerPush = Router.prototype.push
 Router.prototype.push = function push(location) {
@@ -27,6 +30,16 @@ Router.prototype.push = function push(location) {
 Vue.use(Router)
 let router= new Router({
   routes: [
+    {
+      path: '/WseachPage',
+      name: 'WseachPage',
+      component: WseachPage
+    },
+    {
+      path: '/WshoppingCar',
+      name: 'WshoppingCar',
+      component: WshoppingCar
+    },
     {
       path: '/',
       name: 'Liindex',

@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2019-11-26 11:06:12
- * @LastEditTime: 2019-12-06 20:47:33
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-12-08 16:02:15
+ * @LastEditors: 王磊
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\src\main.js
  */
