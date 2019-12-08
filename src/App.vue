@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-26 11:06:12
- * @LastEditTime: 2019-12-08 16:26:27
+ * @LastEditTime: 2019-12-08 16:46:45
  * @LastEditors: 是丽丽呀
  * @Description: In User Settings Edit
  * @FilePath: \reactd:\三阶段\vueWorkspace\juanpi\src\App.vue
@@ -35,9 +35,7 @@ body{
  
   /* background:#f6f7f9; */
 }
-#app { 
-  /* margin-top: 5px; */
-}
+
 ul,li{
   list-style: none;
 }
