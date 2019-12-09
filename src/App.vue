@@ -19,6 +19,9 @@ export default {
 </script>
 
 <style>
+ul,ol,li{
+	list-style: none;
+}
 *{
   margin: 0;
   padding: 0;
@@ -29,11 +32,8 @@ html{
 }
 body{
   font-size: 14px;
-  /* height: 100%;
-  display: -webkit-flex;
-  flex-direction:column; */
- 
-  /* background:#f6f7f9; */
+ height:100%;
+ width:100%;
 }
 
 ul,li{

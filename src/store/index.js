@@ -51,16 +51,22 @@ let store=new VueX.Store({
         cteateNum(state,num){
             state.num=num;
             // console.log(state.num)
-        }, 
-         carGoods(state,goodsData){
+        },
+      //   pay(state,shuju){
+      //     state.pay = shuju;
+      // }
+       pay(state,goodsData){
+         
            state.goodsData=goodsData;
+           console.log(state.goodsData)
            let littleMoney=0
            let arrImg=[];
            let goodsSum=0;
            for(let i in goodsData){
-               littleMoney+=parseFloat(goodsData[i].num*goodsData[i].price);
+             console.log(goodsData[i])
+               littleMoney+=parseFloat(goodsData[i].count*goodsData[i].price);
                arrImg.push(goodsData[i].img);
-               goodsSum+=parseFloat(goodsData[i].num);
+               goodsSum+=parseFloat(goodsData[i].count);
                }
               state.totalMoney=littleMoney;
               state.carGoodsNum=goodsSum;
@@ -110,9 +116,6 @@ let store=new VueX.Store({
             
         }
       },
-      pay(state,shuju){
-          state.pay = shuju;
-      }
       
       },
       actions:{

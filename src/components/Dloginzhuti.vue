@@ -2,7 +2,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-06 19:26:33
- * @LastEditTime: 2019-12-02 15:22:41
+ * @LastEditTime: 2019-12-09 10:56:53
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \day12d:\vuekong\myfule\src\components\Serich.vue
@@ -18,13 +18,14 @@
    <input class="shuru" type="password" placeholder="请输入密码"  v-model="password" @blur="check2()">
    <span id="reg2">{{reg2}}</span>
     <input class="denglu" type="submit" value="登陆" id="consub" @click="checklogin()">
-    <div class="xiugai">
+    <div class="Dxgmima">
         <p>修改密码</p>
     </div>
 </div>
 </template>
 
 <script>
+import { Toast } from 'mint-ui';
 export default {
   data () {
     return {
@@ -50,7 +51,9 @@ export default {
             }
         },
         checklogin(){
-        fetch('http://localhost:3000/car?name='+this.name)//jsonsever
+            // this.$store.commit("checklogin",id)
+            // console.log(id);
+        fetch('http://localhost:3000/car?name='+this.name) //jsonsever
       .then(res=>{
         return res.json();
       })
@@ -61,6 +64,7 @@ export default {
           console.log(pass)
           if(this.password==pass){
               console.log("成功")
+              Toast('登陆成功');
               window.localStorage.setItem('name', name);
               console.log(name)
               let str="name"+"="+name
@@ -70,6 +74,7 @@ export default {
 						this.$router.push({path:str});
 					},1100);
           }else{
+              Toast('登陆失败');
               console.log("失败")
           }
      })
@@ -80,10 +85,10 @@ export default {
         }
     }
 </script>
-<style lang="scss" scoped="" type="text/css">
+<style lang="scss" scoped type="text/css">
 .regiset{
     width:100%;
-    height:100%;
+    overflow: hidden;
 }
 .dltop{
     display: flex;

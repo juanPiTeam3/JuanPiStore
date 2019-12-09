@@ -21,10 +21,10 @@
                 </div>
                 <div class="right">
                     <div class="top1">
-                        <h4>{{goods.title}}</h4>
-                        <span>×{{goods.num}}</span>
+                        <h4>{{goods.name}}</h4>
+                        <span>×{{goods.count}}</span>
                     </div>
-                    <h6>{{goods.color}} {{goods.size}}</h6>
+                    <h6>{{goods.deocra}} {{goods.size}}</h6>
                     <div class="bottom1">
                         <p>￥{{goods.price}}.00</p>
                         <!-- <div class="say" @click="show">

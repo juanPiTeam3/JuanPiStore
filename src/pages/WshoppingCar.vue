@@ -9,28 +9,38 @@
     <div>
         <WshoppCar1></WshoppCar1>
         <WshoppCar2></WshoppCar2>
+        <LyFooter  v-bind:class="{last: isShow}"></LyFooter>      
     </div>
 </template>
 
 <script>
 import WshoppCar1 from '../components/WshoppCar1'
 import WshoppCar2 from '../components/WshoppCar2'
+import LyFooter from '../components/LyFooter'
 export default {
     name:"WshoppingCar",
     data() {
         return {
-            
+            isShow:false
         }
     },
     components:{
-        WshoppCar1,WshoppCar2
+        WshoppCar1,WshoppCar2,LyFooter
     },
-    beforeUpdate() {
-        // console.log("aaaa")
-    },
+   mounted(){
+       let path= this.$route.query.path;
+    //    console.log(path);
+       if(path=='WshoppingCar'){
+              this.isShow=true;
+       }
+   }
 }
 </script>
 
 <style scoped>
-
+.last{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
 </style>

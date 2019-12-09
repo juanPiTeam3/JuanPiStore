@@ -115,6 +115,7 @@ export default {
              if(this.userInfor!=null){
                    this.$store.commit('userInfo',this.userInfor ); 
                     let  toPurchasePath=this.$route.query.path;
+                    console.log(toPurchasePath);
                    if(toPurchasePath=='LdetailPage02'){
                         this.$router.push({path:'/LpurchasePage',
                                     query: {

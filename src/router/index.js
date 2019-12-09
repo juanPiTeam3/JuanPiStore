@@ -19,7 +19,12 @@ import Liindex from '@/page/Liindex'
 import LshopPage from '@/page/LshopPage';
 import LmainPage from '@/page/LmainPage';
 import LsearchPage from '@/page/LsearchPage';
-
+import Dmyp from '@/pages/Dmyp';
+import Dregiset from '@/pages/Dregiset';
+import Dphonenumber from '@/pages/Dphonenumber';
+import Dlogin from '@/pages/Dlogin';
+import Dxiugai from '@/pages/Dxiugai';
+import Dxgmima from '@/pages/Dxgmima';
 import WseachPage from '@/pages/WseachPage'
 import WshoppingCar from '@/pages/WshoppingCar'
 import Router from 'vue-router'
@@ -31,6 +36,16 @@ Vue.use(Router)
 let router= new Router({
   routes: [
     {
+      path: '/',
+      name: 'Liindex',
+      component: Liindex
+   },
+   {
+    path: '/Liindex',
+    name: 'Liindex',
+    component: Liindex
+ },
+    {
       path: '/WseachPage',
       name: 'WseachPage',
       component: WseachPage
@@ -40,11 +55,7 @@ let router= new Router({
       name: 'WshoppingCar',
       component: WshoppingCar
     },
-    {
-      path: '/',
-      name: 'Liindex',
-      component: Liindex
-   },
+    
     {
       path: '/LdetailPage',
       name: 'LdetailPage',
@@ -108,6 +119,44 @@ let router= new Router({
     //   }
     //   next()
     // }
+  },
+  {
+    path: '/Dmyp',
+    name: 'Dmyp', 
+    component: Dmyp,
+    //路由守卫
+    beforeEnter(to,from,next){
+      if(!localStorage.getItem('name')){
+        next('/Dlogin')
+      }
+      next()
+    }
+  },
+  {
+    path: '/Dregiset',
+    name: 'Dregiset',
+    component: Dregiset
+  },
+  {
+    path: '/Dphonenumber',
+    name: 'Dphonenumber',
+    component: Dphonenumber
+  } ,
+  {
+    path: '/Dlogin',
+    name: 'Dlogin',
+    component: Dlogin
+  },
+  {
+    path: '/Dxiugai',
+    name: 'Dxiugai',
+    component: Dxiugai
+  },
+  {
+    path: '/Dxgmima',
+    name: 'Dxgmima',
+    component: Dxgmima
+
   }
 
   ]

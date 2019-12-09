@@ -25,18 +25,8 @@ export default {
     },
     components:{
         Wseach1,Wseachmain
-    },
-    created() {
-    },
-    mounted() {
-       
-    },
-    beforeUpdate() {
-        
-    },
-    methods:{
-        
     }
+    
      
 }
 </script>

@@ -126,7 +126,8 @@ export default {
         sizes:[],
         id:0,
         tempB:[],
-        totalMoney1:0
+        totalMoney1:0,
+       
         
     }
   },
@@ -260,7 +261,14 @@ export default {
            }
         //    console.log(payarr)
         //    console.log(this.totalMoney1)
-        this.$store.commit('pay',[payarr,this.totalMoney1])
+         let path= this.$route.query.path;
+        this.$store.commit('pay',payarr);
+        console.log(path)
+        this.$router.push({path:'/LpurchasePage',
+							query: {
+									path:path
+								}
+					});
       },
       changLi1(index){//改变商品属性
           this.desListimg = this.imgs[index].img;

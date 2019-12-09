@@ -10,7 +10,8 @@
 <template>
 <div id="box">
     <ul>
-        <li :class="isactive==index?'red':''" v-for="(item,index) in footers" :key="index" @touchstart='clk(index)'>
+        <li :class="isactive==index?'red':''" v-for="(item,index) in footers"
+         :key="index" @touchstart='clk(index)' @click="to(item.path)">
                 <!-- :class="isactive==index?'addclass':''" -->
                 <span  class="iconfont" :class="item.spanclass"></span>
                 <span>{{item.title}}</span>  
@@ -27,20 +28,25 @@ export default {
       footers:[
           {
               "spanclass":"icon-shouye2",
-              "title":"首页"
+              "title":"首页",
+              "path":"Liindex"
           },
               {
               "spanclass":"icon-pinpaiqingcang",
-              "title":"品牌清仓"
+              "title":"品牌清仓",
+              "path":"Liindex"
           },    {
               "spanclass":"icon-9",
-              "title":"9块邮"
+              "title":"9块邮",
+              "path":"Liindex"
           },    {
               "spanclass":"icon-gouwuche",
-              "title":"购物车"
+              "title":"购物车",
+              "path":"WshoppingCar"
           },    {
               "spanclass":"icon-wodedangxuan",
-              "title":"我的卷皮"
+              "title":"我的卷皮",
+              "path":"Liindex"
           }
       ]
     }
@@ -48,6 +54,13 @@ export default {
   methods:{
       clk(index){
           this.isactive=index;
+      },
+      to(path){
+         this.$router.push({path:'/'+path,
+               query: {
+                        path:path
+                    }
+         });
       }
   }
 }

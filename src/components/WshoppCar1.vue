@@ -7,18 +7,24 @@
  -->
 <template>
     <div class="shoppcar1">
+        <back></back>
          <p>购物车</p>
          <span id="zi"  @click="change">{{this.wenzi}}</span>
     </div>
 </template>
 
 <script>
+import back from '../components/back';
+
 export default {
     name: 'shoppcar1',
     data() {
         return {
            wenzi:"编辑" ,
         }
+    },
+    components:{
+        back
     },
      methods:{
         

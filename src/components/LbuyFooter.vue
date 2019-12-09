@@ -69,7 +69,7 @@ export default{
         goWrite(){
              let  toAddressPath=this.$route.query.path;
             console.log(toAddressPath);
-            if(toAddressPath=='LdetailPage'){
+            if(toAddressPath=='LdetailPage' || toAddressPath=='WshoppingCar'){
              this.$router.push({path:'/LaddressPage',
 							query: {
 									path:this.path
@@ -92,7 +92,7 @@ export default{
       },
       mounted(){
             let path= this.$route.query.path;
-             if(path=='LdetailPage' || path=='LdetailPage02'){
+             if(path=='LdetailPage' || path=='LdetailPage02'|| path=='WshoppingCar'){
                  this.isShow=true;
                  this.Show=false;
                  

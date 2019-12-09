@@ -85,7 +85,7 @@ export default{
             goodsSum:0,
             goodsImgAndName:{},
              value:true,
-             buyProducts:{}
+             buyProducts:{},
 
 		}
     },
@@ -109,10 +109,11 @@ export default{
       this.goodsInfo=this.$store.state.buyObj;
       this.goodsImgAndName=this.$store.state.goodsImgAndName;
        let path= this.$route.query.path;
-             if(path=='LdetailPage02' || path=='LdetailPage'){
+       console.log(path)
+             if(path=='LdetailPage02' || path=='LdetailPage' || path=='WshoppingCar'){
                  this.isActive=true;
                  this.Active=false;
-                  this.isShow=true;
+                this.isShow=true;
                  this.Show=false;
                  
                 //   console.log(val)
